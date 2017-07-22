@@ -96,7 +96,7 @@ contract SafeToken is StandardToken, owned {
     uint256 public constant maximalSupply =  1 * (10**6) * 10**decimals;
 
     address private constant beneficiary = 0x7Dfba43287d2847ed997DDEb1e0dE338540C60ED;
-    address private constant developer = 0x63d37882D6bA050A91e76E763dC9D4aA00497Bfc; 
+    address private constant developer = 0xb10808423971c9bb5e0a2587e055d7b9A516Cd59; 
     bool public difficultyTickerChangeable = true;
     bool public etherPriceTickerChangeable = true;
     bool public saleActive = false;
