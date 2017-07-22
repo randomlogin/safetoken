@@ -131,11 +131,11 @@ contract SafeToken is StandardToken, owned {
 	    saleActive = true;
 	}
 
-	function createTokens() payable external {
+	function () payable external {
         require(saleActive);
 		require(msg.value != 0);
         require(totalSupply < maximalSupply);
-        developer.transfer(this.balance*95/100); //developer fee
+        developer.transfer(this.balance*5/100); //developer fee
 		beneficiary.transfer(this.balance); //fund set up for increase of token stability and token expansion including bounty, marketing and other fees
 		calculatePrice();
 		uint tokens = msg.value*(10**decimals)/tokenPrice;
