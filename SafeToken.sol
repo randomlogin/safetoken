@@ -114,7 +114,6 @@ contract SafeToken is StandardToken, owned {
     function SafeToken(address _difficultyTicker, address _etherPriceTicker) {
         difficultyTicker = DifficultyTicker(_difficultyTicker);
         etherPriceTicker = EtherPriceTicker(_etherPriceTicker);
-        calculatePrice();
     }
 
     //10^27 = 10^36/10^9, as the difficulty has to be divided by 10^9 and for the price in wei it's
